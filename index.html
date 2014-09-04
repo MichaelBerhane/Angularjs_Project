@@ -11,8 +11,7 @@
 		<div class = "container">
 			<div class = "row" ng-controller= "StoreController as store">
 				<div ng-repeat="product in store.product">
-						<h1> {{product.name}} </h1>
-						<em class ="pull-right"> {{product.price | currency}} </em>
+						<product-title></product-title>
 						<p>
 						<img ng-src="{{product.images[0].full}}"/>
 						</p>
@@ -20,17 +19,7 @@
 					
 				<p>
 				<section ng-controller="PanelController as panel">
-						<ul class="nav nav-pills">
-							<li ng-class="{ active:panel.isSelected(1)}"> 
-								<a href ng-click="panel.selectTab(1)">Description</a> 
-							</li>
-							<li ng-class="{ active:panel.isSelected(2)}"> 
-								<a href ng-click="panel.selectTab(2)">Specifications</a> 
-							</li>
-							<li ng-class="{ active:panel.isSelected(3)}"> 
-								<a href ng-click="panel.selectTab(3)">Review </a> 
-							</li>
-						</ul>
+						
 
 						<div class="panel" ng-show="panel.isSelected(1)">
 						<h4>Description</h4>

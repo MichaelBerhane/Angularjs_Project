@@ -64,17 +64,23 @@ app.controller('ReviewController', function(){
 	
 })
 
-
 app.directive ('productTitle', function(){
-
 	return{
 		restrict: 'E',
 		templateUrl: 'product-title.html'
 	};
-
-
 });
 
+app.directive ('productPanel', function(){
+	return{
+		restrict: 'E',
+		templateUrl: 'product-panels.html',
+		controller: function(){
+			.....
+		},
+		controllerAs: 'panels'
+	};
+});
 
 
 
