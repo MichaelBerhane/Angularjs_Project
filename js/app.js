@@ -60,10 +60,20 @@ app.controller('ReviewController', function(){
 	this.addReview = function(product){
 		product.reviews.push(this.review);
 		this.review = {};
-	};
+	};	
 	
 })
 
+
+app.directive ('productTitle', function(){
+
+	return{
+		restrict: 'E',
+		templateUrl: 'product-title.html'
+	};
+
+
+});
 
 
 
