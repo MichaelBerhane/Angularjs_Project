@@ -1,6 +1,6 @@
 
 (function(){
-var app = angular.module('store', []);
+var app = angular.module('store', ['store-products']);
 app.controller('StoreController', function(){
 	this.product = gem;
 })
@@ -76,7 +76,17 @@ app.directive ('productPanel', function(){
 		restrict: 'E',
 		templateUrl: 'product-panels.html',
 		controller: function(){
-			.....
+
+			this.tab = 1;
+
+			this.selectTab = function(selectTab){
+				this.tab = selectTab;
+			}
+
+			this.isSelected = function(checkTab){
+				return this.tab === checkTab;
+			}
+			
 		},
 		controllerAs: 'panels'
 	};
